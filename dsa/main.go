@@ -15,6 +15,8 @@ func main() {
 		runQuicksort()
 	case "maps":
 		runMaps()
+	case "stack":
+		runStack()
 	}
 
 }
@@ -39,4 +41,30 @@ func runMaps() {
 	words := os.Args[2:]
 	stats := stats(words)
 	printStats(stats)
+}
+
+func runStack() {
+	stack := Stack{}
+	fmt.Println("Stack created with size:", stack.Size())
+	fmt.Println("Is stack empty?", stack.IsEmpty())
+
+	stack.Push("Go")
+	stack.Push(2009)
+	stack.Push(3.14)
+	stack.Push("End")
+
+	fmt.Println("Stack size:", stack.Size())
+	fmt.Println("Is stack empty? ", stack.IsEmpty())
+
+	for !stack.IsEmpty() {
+		v, _ := stack.Pop()
+		fmt.Println("Popped value:", v)
+		fmt.Println("Size after pop:", stack.Size())
+		fmt.Println("Is stack empty? ", stack.IsEmpty())
+	}
+
+	_, err := stack.Pop()
+	if err != nil {
+		fmt.Println("Error occurred while popping from stack:", err)
+	}
 }
