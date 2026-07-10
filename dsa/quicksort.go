@@ -1,27 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"os"
-	"strconv"
-)
-
-func main() {
-	values := os.Args[1:]
-	numbers := make([]int, len(values))
-
-	for i, v := range values {
-		number, err := strconv.Atoi(v)
-		if err != nil {
-			fmt.Printf("%s isn't a valid number \n", v)
-			os.Exit(1)
-		}
-		numbers[i] = number
-	}
-
-	fmt.Println(quicksort(numbers))
-}
-
 // Time complexity: average O(n log n), worst case O(n^2)
 // Space complexity: average O(n), worst case O(n^2)
 func quicksort(numbers []int) []int {
