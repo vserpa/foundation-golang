@@ -12,6 +12,8 @@ func main() {
 		runConverter()
 	case "infinite-loop":
 		runInfiniteLoop()
+	case "named-loop":
+		runNamedLoop()
 	}
 }
 
@@ -21,4 +23,8 @@ func runConverter() {
 
 func runInfiniteLoop() {
 	infiniteLoop()
+}
+
+func runNamedLoop() {
+	namedLoop()
 }

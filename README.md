@@ -1,11 +1,25 @@
 # foundation-golang
 Golang foundation exercises
 
+# Utils
+
 ## Converter
 ```shell
 # go run utils/converter.go <values> <unity: kilometers|celsius>
-go run utils/converter.go 80 100 120 kilometers
+go run ./utils converter 80 100 120 kilometers
 ```
+## Infinite Loop
+```shell
+# go run utils/converter.go <values> <unity: kilometers|celsius>
+go run ./utils infinite-loop
+```
+## Named Loop
+```shell
+# go run utils/converter.go <values> <unity: kilometers|celsius>
+go run ./utils named-loop
+```
+
+# DSA
 
 ## Quicksort
 ```shell
