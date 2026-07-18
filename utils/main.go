@@ -14,6 +14,8 @@ func main() {
 		runInfiniteLoop()
 	case "named-loop":
 		runNamedLoop()
+	case "states":
+		runStates()
 	}
 }
 
@@ -27,4 +29,8 @@ func runInfiniteLoop() {
 
 func runNamedLoop() {
 	namedLoop()
+}
+
+func runStates() {
+	states()
 }
