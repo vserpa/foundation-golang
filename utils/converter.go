@@ -6,14 +6,14 @@ import (
 	"strconv"
 )
 
-func main() {
-	if len(os.Args) < 3 {
-		fmt.Println("Use: <values> <unity: celsius|kilometers>")
+func converter() {
+	if len(os.Args) < 4 {
+		fmt.Println("Use: converter <values> <unity: celsius|kilometers>")
 		os.Exit(1)
 	}
 
 	unity := os.Args[len(os.Args)-1]
-	values := os.Args[1 : len(os.Args)-1] // slicing ignores the last element
+	values := os.Args[2 : len(os.Args)-1] // slicing ignores the last element
 
 	if unity != "celsius" && unity != "kilometers" {
 		fmt.Printf("%s is not a valid unity", unity)
