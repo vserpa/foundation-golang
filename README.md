@@ -35,6 +35,12 @@ go run ./dsa quicksort 3 2 9 0 8 4 7
 # go run ./dsa maps <words>
 go run ./dsa maps gallery circle ground around Grammar
 ```
+
+## Ordered Map
+```shell
+go run ./dsa ordered-map
+```
+
 ## Stack
 ```shell
 # go run ./dsa stack

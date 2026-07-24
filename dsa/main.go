@@ -17,6 +17,8 @@ func main() {
 		runMaps()
 	case "stack":
 		runStack()
+	case "ordered-map":
+		runOrderedMap()
 	}
 
 }
@@ -67,4 +69,8 @@ func runStack() {
 	if err != nil {
 		fmt.Println("Error occurred while popping from stack:", err)
 	}
+}
+
+func runOrderedMap() {
+	orderedMap()
 }
